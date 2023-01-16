@@ -13,13 +13,13 @@ if __name__ == "__main__":
     subprocess.check_call(["cmake", ".."])
     subprocess.check_call(["make"])
     os.chdir(current_path)
-    import example_functions_build.example_functions as af
+    import example_functions_build.example_functions as ef
     print("************************")
     print("Python code: add() demo:")
     input1 = random.randint(1, 1000)
     input2 = random.randint(1, 1000)
     print("Python code: sending inputs", input1, input2)
-    result = af.add(input1, input2)
+    result = ef.add(input1, input2)
     print("Python code: received result", result)
     print("************************")
     print("Python code: fill() demo:")
@@ -29,5 +29,5 @@ if __name__ == "__main__":
     input5 = np.float64(random.randint(1, 1000))
     print("Python code: sending input matrix\n", input3)
     print("Python code: sending input value", input4)
-    af.fill(input3, input4)
+    ef.fill(input3, input4)
     print("Python code: matrix modified\n", input3)
