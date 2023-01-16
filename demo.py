@@ -26,7 +26,6 @@ if __name__ == "__main__":
     input3 = np.ndarray(shape=(2,2), dtype=np.float64)
     input3.setflags(write=True)
     input4 = np.float64(random.randint(1, 1000))
-    input5 = np.float64(random.randint(1, 1000))
     print("Python code: sending input matrix\n", input3)
     print("Python code: sending input value", input4)
     ef.fill(input3, input4)
