@@ -7,6 +7,17 @@ This project assumes existing installations of...
 - a [CMake](https://cmake.org/) installation invokable by `cmake` command
 - Python 3+ with NumPy
 
+## Cloning the project + git submodules
+This repo depends on two git submodules:
+- pybind11
+- eigen
+
+To pull the submodules while cloning the project include the --recursive flag
+
+```
+git clone --recursive git@github.com:alexhagiopol/pybind_examples.git
+```
+
 ## Usage
 The Python script `demo.py`...
 - compiles the C++ functions in `ExampleFunctions.cpp` using the compilation procedure defined in `CMakeLists.txt`
