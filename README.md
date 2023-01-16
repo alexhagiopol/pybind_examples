@@ -15,7 +15,7 @@ The Python script `demo.py`...
 - calls the C++ functions
 - displays the results. 
 
-`ExampleFunctions.cpp` contains `add()` that uses only C++ standard data types and `fill()` that uses data types from the Eigen library. This illustrates how to use PyBind to translate between Python data types in `demo.py` to C++ data types in `ExampleFunctions.cpp`. PyBind translates standard C++ data type to standard Python data types. PyBind translates `numpy` data types to `Eigen` data types.
+`ExampleFunctions.cpp` contains `add()` that uses only C++ standard data types and `fill()` that uses data types from the Eigen library. This illustrates how to use PyBind to translate between Python data types in `demo.py` to C++ data types in `ExampleFunctions.cpp`. PyBind translates standard C++ data type to standard Python data types. PyBind translates NumPy data types to Eigen data types.
 
 ```
 python3 demo.py 
