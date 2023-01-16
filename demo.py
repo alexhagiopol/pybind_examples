@@ -13,7 +13,7 @@ if __name__ == "__main__":
     subprocess.check_call(["cmake", ".."])
     subprocess.check_call(["make"])
     os.chdir(current_path)
-    import example_functions_build.example_functions as ef
+    import example_functions_build.example_functions as ef # import C++ functions
     print("************************")
     print("Python code: add() demo:")
     input1 = random.randint(1, 1000)
