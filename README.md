@@ -1,11 +1,21 @@
 # PyBind Examples
-Zero-to-one guide for using PyBind to compile and call C++ functions from Python code. 
+Zero-to-one guide for using [PyBind](https://github.com/pybind/pybind11) to compile and call C++ functions from Python code. Includes [NumPy](https://numpy.org/)<->[Eigen](https://gitlab.com/libeigen/eigen) example useful for mathematical programming.
 
 ## Installation
-This project assumes (a) a C++ compiler installed at the system level (i.e. invokable by `make`) and (b) a CMake installation also installed at the system level.
+This project assumes existing installations of...
+- a C++ compiler invokable by `make` command
+- a [CMake](https://cmake.org/) installation invokable by `cmake` command
+- Python 3+ with NumPy
 
 ## Usage
-The Python script `demo.py` (a) compiles the C++ functions in `ExampleFunctions.cpp`, (b) constructs and passes arbitrary inputs to those functions, (c) calls the C++ functions, and (d) displays the results. `ExampleFunctions.cpp` contains `add()` that uses only C++ standard data types and `fill()` that uses data types from the Eigen library. This illustrates how to use PyBind to translate between Python data types in `demo.py` to C++ data types in `ExampleFunctions.cpp`.
+The Python script `demo.py`...
+- compiles the C++ functions in `ExampleFunctions.cpp` using the compilation procedure defined in `CMakeLists.txt`
+- imports the C++ functions to make them available for use using Python code 
+- constructs and passes arbitrary inputs to the C++ functions
+- calls the C++ functions
+- displays the results. 
+
+`ExampleFunctions.cpp` contains `add()` that uses only C++ standard data types and `fill()` that uses data types from the Eigen library. This illustrates how to use PyBind to translate between Python data types in `demo.py` to C++ data types in `ExampleFunctions.cpp`. PyBind translates standard C++ data type to standard Python data types. PyBind translates `numpy` data types to `Eigen` data types.
 
 ```
 python3 demo.py 
@@ -52,3 +62,6 @@ Python code: matrix modified
  [[133. 133.]
  [133. 133.]]
 ```
+
+## Further Reading
+The full [PyBind documentation](https://pybind11.readthedocs.io/_/downloads/en/latest/pdf/) is excellent for going beyond what is illustrated here.
